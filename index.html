@@ -2,52 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Student Complaint Portal</title>
+  <title>IIT Mandi – Smart Complaint Management System</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-  <h1>Mess & Hostel Complaint Portal</h1>
-  <p>Submit your complaint digitally.</p>
+<!-- HERO SECTION -->
+<div class="container fade-in">
+  <div class="card" style="display:flex; align-items:center; gap:30px; flex-wrap:wrap">
 
-  <form onsubmit="return submitComplaint()">
-    <label>Complaint Type</label>
-    <select required>
-      <option value="">Select</option>
-      <option>Mess</option>
-      <option>Hostel</option>
-    </select>
+    <!-- Text -->
+    <div style="flex:1; min-width:280px">
+      <h1>IIT Mandi – Smart Complaint Management System</h1>
+      <p style="font-size:16px; line-height:1.6">
+        A centralized digital platform designed to replace manual mess and hostel
+        complaint registers with a transparent, trackable, and data-driven system
+        for students and administration.
+      </p>
+      <p style="color:#555">
+        Built as a prototype for GDG Fresher’s TechSprint.
+      </p>
+    </div>
 
-    <label>Issue Category</label>
-    <select required>
-      <option value="">Select</option>
-      <option>Food Quality</option>
-      <option>Hygiene</option>
-      <option>Water Supply</option>
-      <option>Electricity</option>
-    </select>
+    <!-- Image -->
+    <div style="flex:1; min-width:260px; text-align:center">
+      <img 
+        src="https://images.unsplash.com/photo-1580582932707-520aed937b7b"
+        alt="Campus Management"
+        style="width:100%; max-width:420px; border-radius:12px"
+      >
+    </div>
 
-    <label>Description</label>
-    <textarea required></textarea>
+  </div>
 
-    <button type="submit">Submit Complaint</button>
-  </form>
+  <!-- ROLE SELECTION -->
+  <div class="card">
+    <h2>Choose Your Portal</h2>
+    <p style="color:#555">
+      The system provides separate interfaces for students and administration
+      to ensure efficient complaint handling and monitoring.
+    </p>
 
-  <p id="status"></p>
+    <div style="display:flex; gap:25px; flex-wrap:wrap; margin-top:25px">
 
-  <a href="admin.html" class="admin-link">
-    View Admin Dashboard (Demo)
-  </a>
+      <!-- Student -->
+      <div style="flex:1; min-width:260px">
+        <h3>🎓 Student Portal</h3>
+        <p>
+          Students can submit complaints related to mess or hostel facilities,
+          receive a complaint ID, and track resolution status digitally.
+        </p>
+        <a href="student.html" class="btn">Go to Student Portal</a>
+      </div>
+
+      <!-- Admin -->
+      <div style="flex:1; min-width:260px">
+        <h3>🧑‍💼 Admin Dashboard</h3>
+        <p>
+          Administration can view all complaints centrally, analyse recurring
+          issues using AI-assisted insights, and monitor resolution progress.
+        </p>
+        <a href="admin.html" class="btn">Go to Admin Dashboard (Demo)</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="card">
+    <h2>Why This System?</h2>
+    <ul style="line-height:1.8">
+      <li>Eliminates manual register-based complaint handling</li>
+      <li>Provides transparency and status tracking for students</li>
+      <li>Offers centralized monitoring for administration</li>
+      <li>Uses AI-assisted insights to identify recurring issues</li>
+    </ul>
+  </div>
+
+  <!-- FOOTER NOTE -->
+  <div style="text-align:center; margin:30px 0; color:#666">
+    <p>
+      <i>Note: Admin dashboard and AI insights are shown in demo mode for MVP
+      demonstration purposes.</i>
+    </p>
+  </div>
+
 </div>
-
-<script>
-function submitComplaint() {
-  document.getElementById("status").innerText =
-  "Complaint Submitted Successfully (ID: CMP001)";
-  return false;
-}
-</script>
 
 </body>
 </html>
