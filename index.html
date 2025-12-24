@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Complaint Tracking System</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Student Complaint Portal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>Mess & Hostel Complaint Portal</h1>
-    <p>Submit your complaint and track its status digitally.</p>
+  <h1>Mess & Hostel Complaint Portal</h1>
+  <p>Submit your complaint digitally.</p>
 
-    <form id="complaintForm">
-        <label>Complaint Type</label>
-        <select required>
-            <option value="">Select</option>
-            <option>Mess</option>
-            <option>Hostel</option>
-        </select>
+  <form onsubmit="return submitComplaint()">
+    <label>Complaint Type</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Mess</option>
+      <option>Hostel</option>
+    </select>
 
-        <label>Issue Category</label>
-        <select required>
-            <option value="">Select</option>
-            <option>Food Quality</option>
-            <option>Hygiene</option>
-            <option>Water Supply</option>
-            <option>Electricity</option>
-        </select>
+    <label>Issue Category</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Food Quality</option>
+      <option>Hygiene</option>
+      <option>Water Supply</option>
+      <option>Electricity</option>
+    </select>
 
-        <label>Description</label>
-        <textarea required></textarea>
+    <label>Description</label>
+    <textarea required></textarea>
 
-        <button type="submit">Submit Complaint</button>
-    </form>
+    <button type="submit">Submit Complaint</button>
+  </form>
 
-    <p>Status: Submitted (Demo)</p>
+  <p id="status"></p>
+
+  <a href="admin.html" class="admin-link">
+    View Admin Dashboard (Demo)
+  </a>
 </div>
 
-<script src="script.js"></script>
+<script>
+function submitComplaint() {
+  document.getElementById("status").innerText =
+  "Complaint Submitted Successfully (ID: CMP001)";
+  return false;
+}
+</script>
+
 </body>
 </html>
