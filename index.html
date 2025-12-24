@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complaint Tracking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Mess & Hostel Complaint Portal</h1>
+    <p>Submit your complaint and track its status digitally.</p>
+
+    <form id="complaintForm">
+        <label>Complaint Type</label>
+        <select required>
+            <option value="">Select</option>
+            <option>Mess</option>
+            <option>Hostel</option>
+        </select>
+
+        <label>Issue Category</label>
+        <select required>
+            <option value="">Select</option>
+            <option>Food Quality</option>
+            <option>Hygiene</option>
+            <option>Water Supply</option>
+            <option>Electricity</option>
+        </select>
+
+        <label>Description</label>
+        <textarea required></textarea>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+
+    <p>Status: Submitted (Demo)</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
