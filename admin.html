@@ -1,48 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="container fade-in">
   <h1>Admin Dashboard</h1>
-  <p>Centralised view of campus complaints</p>
 
-  <table>
-    <tr>
-      <th>Complaint ID</th>
-      <th>Type</th>
-      <th>Category</th>
-      <th>Status</th>
-    </tr>
-    <tr>
-      <td>CMP001</td>
-      <td>Mess</td>
-      <td>Food Quality</td>
-      <td>Submitted</td>
-    </tr>
-    <tr>
-      <td>CMP002</td>
-      <td>Hostel</td>
-      <td>Water Supply</td>
-      <td>In Progress</td>
-    </tr>
-  </table>
+  <!-- Complaints Table -->
+  <div class="card">
+    <h2>Complaints Overview</h2>
 
-  <h3>AI-Assisted Insights (Demo)</h3>
-  <ul>
-    <li>Most common issue: Food Quality</li>
-    <li>Peak complaints from: Hostel A</li>
-    <li>Repeated issues detected</li>
-  </ul>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Category</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>CMP101</td>
+        <td>Mess</td>
+        <td>Food Quality</td>
+        <td class="status-pending">Pending</td>
+      </tr>
+      <tr>
+        <td>CMP102</td>
+        <td>Hostel</td>
+        <td>Water Supply</td>
+        <td class="status-resolved">Resolved</td>
+      </tr>
+      <tr>
+        <td>CMP103</td>
+        <td>Mess</td>
+        <td>Cleanliness</td>
+        <td class="status-pending">Pending</td>
+      </tr>
+    </table>
+  </div>
 
-  <a href="index.html" class="admin-link">
-    Back to Student Portal
-  </a>
+  <!-- Graph Section -->
+  <div class="card">
+    <h2>Monthly Complaint Analysis</h2>
+    <canvas id="complaintChart"></canvas>
+  </div>
+
+  <!-- AI Insight -->
+  <div class="card">
+    <h2>AI-Assisted Insights (Demo)</h2>
+    <p>
+      Analysis shows that <b>Food Quality</b> complaints from the mess
+      are the most frequent this month. Repeated patterns indicate
+      the need for preventive action rather than reactive handling.
+    </p>
+  </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const ctx = document.getElementById('complaintChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Food', 'Water', 'Cleanliness', 'Electricity', 'Internet'],
+    datasets: [{
+      label: 'Complaints this month',
+      data: [18, 9, 12, 5, 7],
+      backgroundColor: '#2563eb'
+    }]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
 
 </body>
 </html>
