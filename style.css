@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2980b9, #6dd5fa);
+}
+
+.container {
+    background: white;
+    width: 400px;
+    margin: 60px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
