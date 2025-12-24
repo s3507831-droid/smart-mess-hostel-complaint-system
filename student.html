@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Complaint Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container fade-in">
+  <h1>Student Complaint Portal</h1>
+  <p>Please fill the form below to register your complaint.</p>
+
+  <div class="card">
+
+    <label>Student Name</label>
+    <input type="text" placeholder="Enter your full name" required>
+
+    <label>Roll Number</label>
+    <input type="text" placeholder="Enter roll number" required>
+
+    <label>Complaint Type</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Mess</option>
+      <option>Hostel</option>
+    </select>
+
+    <label>Hostel / Mess Name</label>
+    <select>
+      <option value="">Select</option>
+      <option>Udaygiri Hostel</option>
+      <option>Himgiri Hostel</option>
+      <option>Neelkanth Hostel</option>
+      <option>Main Mess</option>
+    </select>
+
+    <label>Complaint Category</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Food Quality</option>
+      <option>Cleanliness</option>
+      <option>Water Supply</option>
+      <option>Electricity</option>
+      <option>Internet</option>
+    </select>
+
+    <label>Complaint Description</label>
+    <textarea placeholder="Describe the issue in detail" required></textarea>
+
+    <label>Upload Supporting Image (optional)</label>
+    <input type="file" accept="image/*">
+
+    <button class="btn" onclick="submitComplaint()">Submit Complaint</button>
+
+    <p id="result" style="margin-top:15px;"></p>
+
+  </div>
+
+  <a href="admin.html" class="btn">View Admin Dashboard (Demo)</a>
+</div>
+
+<script>
+function submitComplaint() {
+  document.getElementById("result").innerHTML =
+    "<b>Complaint Submitted Successfully!</b><br>" +
+    "Complaint ID: CMP" + Math.floor(Math.random() * 1000) +
+    "<br>Status: Submitted";
+}
+</script>
+
+</body>
+</html>
