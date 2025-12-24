@@ -17,7 +17,7 @@ This repository contains a basic HTML, CSS, and JavaScript based MVP.
 https://mv1511979-source.github.io/iit-mandi-complaints/
 
 ## Team
-Sanjana yadav 
-Yamini 
-Aryan verma
+Sanjana yadav ,
+Yamini ,
+Aryan verma,
 Aasha solanki
